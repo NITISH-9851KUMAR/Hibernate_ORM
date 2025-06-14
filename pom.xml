@@ -23,11 +23,13 @@
       <scope>test</scope>
     </dependency>
 
-    <dependency> <!-- Dependencies for Hibernate -->
-      <groupId>org.hibernate.orm</groupId>
+    <!-- Use Hibernate 5.6 or later newer version -->
+    <dependency>
+      <groupId>org.hibernate</groupId>
       <artifactId>hibernate-core</artifactId>
-      <version>6.4.4.Final</version>
+      <version>5.6.15.Final</version> <!-- or newer -->
     </dependency>
+
 
     <!-- Dependency for oracle 11g database -->
     <dependency>
@@ -36,7 +38,6 @@
       <version>11.2.0.4</version>
       <scope>provided</scope>
     </dependency>
-
 
   </dependencies>
 </project>
