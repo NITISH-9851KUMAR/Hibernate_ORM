@@ -24,7 +24,7 @@ import org.hibernate.Transaction;
 
 @Entity // Make Address Class As Entity
 @Table(name= "student_address") // Put the table name of Entity class as student_address
-public class Address {
+public class Annotation {
 
     @Id // Make column primary key
     @Column(name= "address_id") // column name
@@ -50,12 +50,12 @@ public class Address {
     @Lob // Large Object
     private byte[] image;
 
-    public Address (){ // Default Constructor
+    public Annotation(){ // Default Constructor
         super();
     }
 
 
-    public Address(String street, String city, boolean isOpen, double x, Date addDate, byte[] b) {
+    public Annotation(String street, String city, boolean isOpen, double x, Date addDate, byte[] b) {
         // Parametrized Constructor
         this.street = street;
         this.city = city;
@@ -81,7 +81,7 @@ public class Address {
         byte[] data_img= new byte[fis.available()];
         fis.read(data_img);
 
-        Address address= new Address("Street_1", "Saharsa", true, 20.3, new Date(), data_img);
+        Annotation address= new Annotation("Street_1", "Saharsa", true, 20.3, new Date(), data_img);
 
         Session session= factory.openSession();
         Transaction tx= session.beginTransaction();
