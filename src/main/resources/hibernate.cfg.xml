@@ -12,14 +12,18 @@
         <property name="connection.password">nitish</property>
 
         <!-- Sql Dialect-->
-        <property name="hibernate.dialect">org.hibernate.dialect.OracleDialect</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.Oracle12cDialect</property>
 
         <!-- Other Setting -->
-        <property name="hibernate.show_sql">true</property>
         <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.show_sql">true</property>
 
-        <!-- Mapping for Table Name -->
+<!--         Mapping for Table Name -->
         <mapping class="org.example.Student"/>
+
+        <mapping class="org.example.Annotation" />
+
+        <mapping class="org.example.InsertValue" />
 
     </session-factory>
 </hibernate-configuration>
