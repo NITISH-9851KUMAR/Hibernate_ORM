@@ -25,8 +25,23 @@ public class InsertValue {
     private char grade;
 
     public InsertValue(){
-
     }
+
+    @Override
+    public String toString() { // Return the object value
+        return  +id+"  "+name+ "  "+grade;
+    }
+
+    public int getId(){
+        return id;
+    }
+    public String getName(){
+        return name;
+    }
+    public char getGrade(){
+        return grade;
+    }
+
 
     public InsertValue(int id, String name, char grade){
         this.id= id;
