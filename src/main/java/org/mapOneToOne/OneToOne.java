@@ -1,4 +1,4 @@
-package org.map;
+package org.mapOneToOne;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
