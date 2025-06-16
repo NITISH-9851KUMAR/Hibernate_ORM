@@ -15,42 +15,46 @@ public class OneToMany {
         cfg.configure("hibernate.cfg.xml");
         SessionFactory factory= cfg.buildSessionFactory();
 
-        Question q= new Question(101, "What is Java?");
-
-        Answer a= new Answer(501, "Just another Virtual Accelerator");
-        a.setQuestion(q);
-
-        Answer a1= new Answer(502, "Java is Programming Language");
-        a1.setQuestion(q);
-
-        Answer a2= new Answer(503, "Java is Programming Language");
-        a2.setQuestion(q);
-
-        List<Answer> list= new ArrayList<>();
-        list.add(a);
-        list.add(a1);
-        list.add(a2);
-
-        q.setAnswer(list);
+//        Question q= new Question(101, "What is Java?");
+//
+//        Answer a= new Answer(501, "Just another Virtual Accelerator");
+//        a.setQuestion(q);
+//
+//        Answer a1= new Answer(502, "Java is Programming Language");
+//        a1.setQuestion(q);
+//
+//        Answer a2= new Answer(503, "Java is Programming Language");
+//        a2.setQuestion(q);
+//
+//        List<Answer> list= new ArrayList<>();
+//        list.add(a);
+//        list.add(a1);
+//        list.add(a2);
+//
+//        q.setAnswer(list);
 
         Session session= factory.openSession();
         Transaction tx= session.beginTransaction();
 
-        session.save(q);
-        session.save(a);
-        session.save(a1);
-        session.save(a2);
-
-        tx.commit();
+//        session.save(q);
+//        session.save(a);
+//        session.save(a1);
+//        session.save(a2);
+//
+//        tx.commit();
 
         // Fetch Data
-        Question q2= session.get(Question.class, 101);
-        System.out.println(q2);
 
-        for(Answer aa: q2.getAnswer()){
-            System.out.println(aa.getAnswer());
-        }
+        Question q= session.get(Question.class, 101);
+        System.out.println(q);
 
+//        System.out.println(q.getAnswer().size());
+
+//        for(Answer a: q.getAnswer()){
+//            System.out.println(a.getAnswer());
+//        }
+
+        session.close();
         factory.close();
     }
 }
