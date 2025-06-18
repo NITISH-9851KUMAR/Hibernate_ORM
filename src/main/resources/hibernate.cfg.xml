@@ -10,12 +10,13 @@
         <property name="connection.url">jdbc:oracle:thin:@localhost:1521:XE</property>
         <property name="connection.username">system</property>
         <property name="connection.password">nitish</property>
+        <property name="format_sql">true</property>
 
         <!-- Sql Dialect-->
         <property name="hibernate.dialect">org.hibernate.dialect.Oracle12cDialect</property>
 
         <!-- Other Setting -->
-        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.hbm2ddl.auto">create</property>
         <property name="hibernate.show_sql">true</property>
 
 <!--         Mapping for Table Name -->
@@ -24,6 +25,12 @@
         <mapping class="org.example.Annotation" />
 
         <mapping class="org.example.InsertValue" />
+
+<!--        <mapping class="org.mapOneToOne.Question" />-->
+<!--        <mapping class="org.mapOneToOne.Answer" />-->
+
+        <mapping class="org.mapOneToMany.Question" />
+        <mapping class="org.mapOneToMany.Answer" />
 
     </session-factory>
 </hibernate-configuration>
