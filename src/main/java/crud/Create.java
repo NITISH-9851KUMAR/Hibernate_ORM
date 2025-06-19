@@ -68,12 +68,13 @@ public class Create {
         SessionFactory factory= cfg.buildSessionFactory();
         Session session= factory.openSession();
 
-//        Create obj= new Create(104, "Nitish Kumar", "B.Tech");
-        Create obj1= new Create(105, "Himanshu Kumar", "B.Tech");
-        Create obj2= new Create(106, "Yuvraj Kumar", "B.Tech");
+        Create obj1= new Create(104, "Nitish Kumar", "B.Tech");
+        Create obj2= new Create(105, "Himanshu Kumar", "B.Tech");
+        Create obj3= new Create(106, "Yuvraj Kumar", "B.Tech");
 
         session.save(obj1);
         session.save(obj2);
+        session.save(obj3);
         Transaction tx= session.beginTransaction();
         tx.commit();
 

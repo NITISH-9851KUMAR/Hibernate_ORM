@@ -16,6 +16,7 @@ public class Delete {
         int id= new java.util.Scanner(System.in).nextInt();
 
         Create st1= session.get(Create.class, id);
+
         Transaction tx= session.beginTransaction();
         session.delete(st1);
         tx.commit();
