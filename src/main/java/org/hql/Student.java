@@ -10,7 +10,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class StudentH {
+public class Student {
     @Id
     private int id; // Treated as column name in Table
 
@@ -20,13 +20,13 @@ public class StudentH {
     @Column(length=20)
     private String name; // Treated as column name in Table
 
-    public StudentH(){} // Default Constructor
+    public Student(){} // Default Constructor
 
     public String toString(){
         return id+" "+name+" "+course;
     }
 
-    public StudentH(int id, String name, String course){ // For value assign
+    public Student(int id, String name, String course){ // For value assign
         this.id= id;
         this.course= course;
         this.name= name;
@@ -51,14 +51,20 @@ public class StudentH {
         SessionFactory factory= cfg.buildSessionFactory();
         Session session= factory.openSession();
 
-        StudentH s1= new StudentH(104, "Nitish", "B.Tech");
-        StudentH s2= new StudentH(105, "Himanshu", "B.Tech");
-        StudentH s3= new StudentH(106, "Yuvraj", "B.Tech");
+        Student s1= new Student(106, "Yuvraj Kumar", "B.Tech");
+        Student s2= new Student(107, "Kamalesh Kumar", "B.Tech");
+        Student s3= new Student(108, "Manohar Kumar", "B.Tech");
+        Student s4= new Student(109, "Asith Kumar", "B.Tech");
+        Student s5= new Student(110, "Aditya Kumar", "B.Tech");
+        Student s6= new Student(111, "Juber Kumar", "B.Tech");
 
         Transaction tx= session.beginTransaction();
         session.save(s1);
         session.save(s2);
         session.save(s3);
+        session.save(s4);
+        session.save(s5);
+        session.save(s6);
 
         tx.commit();
 
