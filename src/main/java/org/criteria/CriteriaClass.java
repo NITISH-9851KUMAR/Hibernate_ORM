@@ -4,10 +4,11 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.hql.Student;
+import org.hibernate.Criteria;
 
 import java.util.List;
 
-public class Criteria {
+public class CriteriaClass {
     public static void main(String[] args) {
 
         Configuration cfg= new Configuration();
@@ -18,6 +19,9 @@ public class Criteria {
 
         Criteria c= (Criteria) session.createCriteria(Student.class);
         List<Student> list= c.list();
+        for(Student s: list){
+            System.out.println(s);
+        }
 
 
         session.close();
