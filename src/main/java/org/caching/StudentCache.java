@@ -1,4 +1,4 @@
-package caching;
+package org.caching;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
