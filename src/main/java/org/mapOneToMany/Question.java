@@ -15,7 +15,7 @@ public class Question {
     @Column(length= 50)
     private String question;
 
-    @OneToMany(mappedBy = "question" , fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "question" , fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<Answer> answer;
 
     public String toString(){
