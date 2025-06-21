@@ -11,16 +11,23 @@
         <property name="connection.username">root</property>
         <property name="connection.password">Nitish@04</property>
         <property name="format_sql">true</property>
+        <property name="cache.use_second_level_cache">true</property>
+        <property name="cache.region.factory_class">org.hibernate.cache.ehcache.internal.EhcacheRegionFactory</property>
 
         <!-- Sql Dialect-->
         <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
 
         <!-- Other Setting -->
-        <property name="hibernate.hbm2ddl.auto">create</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
         <property name="hibernate.show_sql">true</property>
 
         <!--         Mapping for Table Name      -->
-        <mapping class="org.example.Annotation"/>
+<!--        <mapping class="org.example.Annotation"/>-->
+        <mapping class="org.crud.Create" />
+        <mapping class="org.hql.HQLExample" />
+        <mapping class="org.hql.Student" />
+        <mapping class="org.caching.StudentCache" />
+
 
 
     </session-factory>
