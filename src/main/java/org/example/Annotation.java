@@ -81,6 +81,7 @@ public class Annotation {
         byte[] data_img= new byte[fis.available()];
         fis.read(data_img);
 
+        // Create the object of address class
         Annotation address= new Annotation("Street_1", "Saharsa", true, 20.3, new Date(), data_img);
 
         Session session= factory.openSession();
