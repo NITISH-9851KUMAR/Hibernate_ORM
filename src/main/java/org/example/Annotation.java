@@ -75,7 +75,6 @@ public class Annotation {
         cfg.configure("hibernate.cfg.xml");
         SessionFactory factory= cfg.buildSessionFactory();
 
-        // Create the object of address class
         // Add photo
         FileInputStream fis= new FileInputStream("src/main/java/Mahadev.png");
         byte[] data_img= new byte[fis.available()];
