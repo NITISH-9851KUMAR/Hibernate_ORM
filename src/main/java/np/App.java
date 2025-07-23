@@ -28,7 +28,6 @@ public class App {
         fis.close();
         session.save(st);
 
-
         session.close();
         factory.close();
     }
