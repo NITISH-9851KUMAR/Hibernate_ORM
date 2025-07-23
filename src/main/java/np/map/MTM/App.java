@@ -14,27 +14,27 @@ public class App {
         Configuration cfg = new Configuration();
         cfg.configure("hibernate3.cfg.xml");
         SessionFactory factory = cfg.buildSessionFactory();
-        Session session= factory.openSession();
-        Transaction tx= session.beginTransaction();
+        Session session = factory.openSession();
+        Transaction tx = session.beginTransaction();
 
-        Employee e1= new Employee(101, "Akash Kumar");
-        Employee e2= new Employee(102, "Ankush Kumar");
-        Employee e3= new Employee(103, "Nitish Kumar");
+        Employee e1 = new Employee(101, "Akash Kumar");
+        Employee e2 = new Employee(102, "Ankush Kumar");
+        Employee e3 = new Employee(103, "Nitish Kumar");
 
-        Project p1= new Project(1, "Bank Management System");
-        Project p2= new Project(2, "E-Commerce Website");
-        Project p3= new Project(3, "Online Shopping");
+        Project p1 = new Project(1, "Bank Management System");
+        Project p2 = new Project(2, "E-Commerce Website");
+        Project p3 = new Project(3, "Online Shopping");
 
         //work Assign
         // e2 -> p1
         // e3 -> p1
         // e3 -> p2
 
-        List<Project> projects= new ArrayList<>();
+        List<Project> projects = new ArrayList<>();
         projects.add(p1);
         projects.add(p2);
 
-        List<Employee> employees= new ArrayList<>();
+        List<Employee> employees = new ArrayList<>();
         employees.add(e2);
         employees.add(e3);
 
@@ -48,10 +48,10 @@ public class App {
         session.save(p2);
         session.save(p3);
 
-
         tx.commit();
 
         session.close();
         factory.close();
     }
+
 }

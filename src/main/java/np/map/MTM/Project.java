@@ -36,4 +36,5 @@ public class Project {
         this.projectId = projectId;
         this.projectName = projectName;
     }
+
 }

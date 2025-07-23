@@ -19,6 +19,7 @@ public class Employee {
             joinColumns = @JoinColumn(name = "e_id"),
             inverseJoinColumns = @JoinColumn(name = "p_id")
     )
+
     private List<Project> projects;
 
     public void setProjects(List<Project> projects) {
