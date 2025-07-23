@@ -5,7 +5,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Session;
 
 
-public class FetchData {
+public class RetrieveData {
     public static void main(String[] args) {
 
         // Fetch Data
@@ -19,7 +19,6 @@ public class FetchData {
 
        session.close();
        factory.close();
-
 
     }
 }
