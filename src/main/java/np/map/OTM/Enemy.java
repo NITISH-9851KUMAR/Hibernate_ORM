@@ -3,22 +3,22 @@ package np.map.OTM;
 import javax.persistence.*;
 
 @Entity
-@Table(name= "enemy")
+@Table(name = "enemy")
 public class Enemy {
 
     @Id
-    @Column(name= "e_id")
+    @Column(name = "e_id")
     private int enemyId;
 
-    @Column(name= "e_name")
+    @Column(name = "e_name")
     private String enemyName;
 
     @ManyToOne
     @JoinColumn(name = "p_id")
     private Person person;
 
-    public void setPerson(Person person){
-        this.person= person;
+    public void setPerson(Person person) {
+        this.person = person;
     }
 
     public Enemy() {
@@ -36,4 +36,5 @@ public class Enemy {
                 ", enemyName='" + enemyName + '\'' +
                 '}';
     }
+
 }
