@@ -53,7 +53,7 @@ public class    Student {
     }
 
     public String toString(){
-        return this.id+" "+this.name+" "+this.grade;
+        return this.id+" : "+this.name+" : "+this.grade;
     }
 
 }
