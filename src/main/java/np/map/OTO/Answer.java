@@ -10,7 +10,7 @@ public class Answer {
     @Column(name = "a_id")
     int answerId;
 
-    @Column(name= "a_name")
+    @Column(name = "a_name")
     String answerName;
 
     @OneToOne(mappedBy = "answer")
@@ -31,4 +31,5 @@ public class Answer {
                 ", answerId=" + answerId +
                 '}';
     }
+
 }

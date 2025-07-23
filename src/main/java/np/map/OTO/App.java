@@ -29,7 +29,7 @@ public class App {
         session.save(a1);
         session.save(a2);
 
-        // fetch Details
+//         fetch Details
 //        Question question= session.get(Question.class, 101);
 //        System.out.println(question);
 //        System.out.println(question.getAnswer().toString());

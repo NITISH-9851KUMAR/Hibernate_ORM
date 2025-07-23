@@ -14,7 +14,7 @@ public class Question {
     String questionName;
 
     @OneToOne
-    @JoinColumn(name= "a_id")
+    @JoinColumn(name = "a_id")
     private Answer answer;
 
     public Answer getAnswer() {
@@ -40,4 +40,5 @@ public class Question {
                 ", questionId=" + questionId +
                 '}';
     }
+
 }
