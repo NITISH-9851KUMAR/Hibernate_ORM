@@ -40,7 +40,6 @@ public class LifecycleState {
         // If we set now the value of object will not save. because it is not associated with session
         student.setName("Kumar");
 
-
         // session.delete(student);
         // student -> Removed State
         // Associated With -> Database: No , Session: Yes
