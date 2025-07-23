@@ -8,17 +8,17 @@ import org.hibernate.Transaction;
 public class App {
     public static void main(String[] args) {
 
-        Configuration cfg= new Configuration();
+        Configuration cfg = new Configuration();
         cfg.configure("hibernate3.cfg.xml");
-        SessionFactory factory= cfg.buildSessionFactory();
-        Session session= factory.openSession();
-        Transaction tx= session.beginTransaction();
+        SessionFactory factory = cfg.buildSessionFactory();
+        Session session = factory.openSession();
+        Transaction tx = session.beginTransaction();
 
-        Person p1= new Person(1, "ABC", "Phulera");
-        Person p2= new Person(2, "DEF", "Fakauli");
+        Person p1 = new Person(1, "ABC", "Phulera");
+        Person p2 = new Person(2, "DEF", "Fakauli");
 
-        Work w1= new Work("Police-Paint", "8 hours");
-        Work w2= new Work("Painter", "8 hours");
+        Work w1 = new Work("Police-Paint", "8 hours");
+        Work w2 = new Work("Painter", "8 hours");
 
         p1.setWork(w1);
         p2.setWork(w2);

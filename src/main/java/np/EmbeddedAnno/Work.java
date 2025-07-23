@@ -15,4 +15,5 @@ public class Work {
         this.work_name = work_name;
         this.work_dur = work_dur;
     }
+
 }
