@@ -7,7 +7,7 @@ import org.hibernate.cfg.Configuration;
 
 import javax.persistence.Query;
 
-public class Delete {
+public class Update {
     public static void main(String[] args) {
 
         Configuration cfg = new Configuration();
@@ -16,15 +16,13 @@ public class Delete {
         Session session = factory.openSession();
         Transaction tx= session.beginTransaction();
 
-        String str= "DELETE FROM Student WHERE grade= :grade";
+        String str= "UPDATE Student SET grade= :grade WHERE id= :id";
         Query query= session.createQuery(str);
-        query.setParameter("grade", 'E');
+        query.setParameter("grade", 'A');
+        query.setParameter("id", 31002);
 
-        // this method execute the query and it returns integer value
-        int rowAffect= query.executeUpdate();
-        System.out.println("Deleted Successfully : "+rowAffect);
-
-        tx.commit();
+        query.executeUpdate();
+        System.out.println("Update Table Successfully");
 
         session.close();
         factory.close();
