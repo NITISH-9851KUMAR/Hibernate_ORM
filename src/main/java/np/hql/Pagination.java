@@ -6,25 +6,30 @@ import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
 import javax.persistence.Query;
+import java.util.List;
 
-public class Delete {
+import org.hql.Student;
+
+public class Pagination {
     public static void main(String[] args) {
 
         Configuration cfg = new Configuration();
-        cfg.configure("hibernate3.cfg.xml");
+        cfg.configure("hibernate2.cfg.xml");
         SessionFactory factory = cfg.buildSessionFactory();
         Session session = factory.openSession();
-        Transaction tx= session.beginTransaction();
+        Transaction tx = session.beginTransaction();
 
-        String str= "DELETE FROM Student WHERE grade= :grade";
-        Query query= session.createQuery(str);
-        query.setParameter("grade", 'E');
+        String hql = "FROM Student";
+        Query query = session.createQuery(hql);
 
-        // this method execute the query and it returns integer value
-        int rowAffect= query.executeUpdate();
-        System.out.println("Deleted Successfully : "+rowAffect);
+        // Pagination
+        query.setFirstResult(3); // set first position
+        query.setMaxResults(3);  // Number of Object
 
-        tx.commit();
+        List<Student> results = query.getResultList();
+        for (Student student : results) {
+            System.out.println(student);
+        }
 
         session.close();
         factory.close();
