@@ -6,9 +6,8 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 import javax.persistence.Query;
-import java.util.List;
 
-public class DynamicValue {
+public class NamedParameter {
     public static void main(String[] args) {
 
         Configuration cfg = new Configuration();
