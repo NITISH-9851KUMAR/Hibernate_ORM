@@ -26,10 +26,7 @@ public class Answer {
 
     @Override
     public String toString() {
-        return "Answer{" +
-                "answerName='" + answerName + '\'' +
-                ", answerId=" + answerId +
-                '}';
+        return answerId+" "+answerName;
     }
 
 }
