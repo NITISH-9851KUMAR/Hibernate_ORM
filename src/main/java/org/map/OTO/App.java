@@ -1,6 +1,5 @@
 package org.map.OTO;
 
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -10,7 +9,7 @@ public class App {
     public static void main(String[] args) {
 
         Configuration cfg= new Configuration();
-        cfg.configure("hibernate3.cfg.xml");
+        cfg.configure("hibernate_mysql.cfg.xml");
         SessionFactory factory= cfg.buildSessionFactory();
         Session session= factory.openSession();
         Transaction tx= session.beginTransaction();
@@ -30,6 +29,7 @@ public class App {
         session.save(a2);
 
 //         fetch Details
+
 //        Question question= session.get(Question.class, 101);
 //        System.out.println(question);
 //        System.out.println(question.getAnswer().toString());
