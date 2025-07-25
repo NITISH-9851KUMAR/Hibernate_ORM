@@ -1,4 +1,4 @@
-package np;
+package org;
 
 import org.hibernate.cfg.Configuration;
 import org.hibernate.SessionFactory;
@@ -9,11 +9,11 @@ public class RetrieveData {
 
         // Fetch Data
        Configuration cfg= new Configuration();
-       cfg.configure("hibernate3.cfg.xml");
+       cfg.configure("hibernate_mysql.cfg.xml");
        SessionFactory factory= cfg.buildSessionFactory();
        Session session= factory.openSession();
 
-       Student student= session.get(Student.class, 104);
+       Student student= session.get(Student.class, 31004);
        System.out.println(student);
 
        session.close();
