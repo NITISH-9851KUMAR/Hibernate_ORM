@@ -11,9 +11,13 @@ public class Work {
     public Work() {
     }
 
-    public Work(String work_name, String work_dur) {
+    public Work(String work_name,String work_dur) {
         this.work_name = work_name;
         this.work_dur = work_dur;
+    }
+
+    public String toString(){
+        return work_name+" "+work_dur;
     }
 
 }
