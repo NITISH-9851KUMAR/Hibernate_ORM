@@ -37,4 +37,8 @@ public class Person {
         return this.work;
     }
 
+    public String toString(){
+        return emp_id+" "+name+" "+home;
+    }
+
 }
