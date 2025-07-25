@@ -31,10 +31,7 @@ public class Enemy {
 
     @Override
     public String toString() {
-        return "Enemy{" +
-                "enemyId=" + enemyId +
-                ", enemyName='" + enemyName + '\'' +
-                '}';
+        return enemyId+" "+enemyName;
     }
 
 }
