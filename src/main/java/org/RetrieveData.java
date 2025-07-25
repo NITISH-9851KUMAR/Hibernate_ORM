@@ -4,7 +4,6 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.SessionFactory;
 import org.hibernate.Session;
 
-
 public class RetrieveData {
     public static void main(String[] args) {
 

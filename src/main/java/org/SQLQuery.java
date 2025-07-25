@@ -6,10 +6,7 @@ import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.query.*;
 
-import java.util.Arrays;
 import java.util.List;
-
-import org.hql.Student;
 
 public class SQLQuery {
     public static void main(String[] args) {
@@ -21,8 +18,7 @@ public class SQLQuery {
         Transaction tx = session.beginTransaction();
 
         String query= "SELECT * FROM student";
-
-        NativeQuery nq= session.createSQLQuery(query);
+        NativeQuery nq= session.createNativeQuery(query);
         List<Object[]> results= nq.getResultList();
 
         for(Object[] student: results){

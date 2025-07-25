@@ -11,20 +11,13 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.TemporalType;
 
-import java.io.FileInputStream;
-import java.io.IOException;
 import java.util.Date;
 
-import org.hibernate.SessionFactory;
-import org.hibernate.Session;
-import org.hibernate.cfg.Configuration;
-import org.hibernate.Transaction;
-
 @Entity
-@Table(name= "student_add")
+@Table(name= "address")
 public class Annotation {
     @Id
-    @Column(name= "address")
+    @Column(name= "addressId")
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private int addressId;
 
