@@ -37,4 +37,8 @@ public class Project {
         this.projectName = projectName;
     }
 
+    public String toString(){
+        return projectId+" "+projectName;
+    }
+
 }
