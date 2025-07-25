@@ -38,4 +38,8 @@ public class Employee {
         this.employeeName = employeeName;
     }
 
+    public String toString(){
+        return employeeId+" "+employeeName;
+    }
+
 }
