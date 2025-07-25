@@ -17,17 +17,17 @@ public class App {
         Session session = factory.openSession();
         Transaction tx = session.beginTransaction();
 
-//        PersonE p1 = new PersonE(1, "ABC", "Phulera");
-//        PersonE p2 = new PersonE(2, "DEF", "Fakauli");
-//
-//        Work w1 = new Work("Police-Paint", "8 hours");
-//        Work w2 = new Work("Painter", "8 hours");
-//
-//        p1.setWork(w1);
-//        p2.setWork(w2);
-//
-//        session.save(p1);
-//        session.save(p2);
+        PersonE p1 = new PersonE(1, "ABC", "Phulera");
+        PersonE p2 = new PersonE(2, "DEF", "Fakauli");
+
+        Work w1 = new Work("Police-Paint", "8 hours");
+        Work w2 = new Work("Painter", "8 hours");
+
+        p1.setWork(w1);
+        p2.setWork(w2);
+
+        session.save(p1);
+        session.save(p2);
 
         // Session Api Fetch Technique
 //        PersonE person= session.get(PersonE.class, 1);
