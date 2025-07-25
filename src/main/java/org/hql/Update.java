@@ -11,13 +11,13 @@ public class Update {
     public static void main(String[] args) {
 
         Configuration cfg = new Configuration();
-        cfg.configure("hibernate3.cfg.xml");
+        cfg.configure("hibernate_mysql.cfg.xml");
         SessionFactory factory = cfg.buildSessionFactory();
         Session session = factory.openSession();
-        Transaction tx= session.beginTransaction();
+        Transaction tx = session.beginTransaction();
 
-        String str= "UPDATE Student SET grade= :grade WHERE id= :id";
-        Query query= session.createQuery(str);
+        String str = "UPDATE Student SET grade= :grade WHERE id= :id";
+        Query query = session.createQuery(str);
         query.setParameter("grade", 'A');
         query.setParameter("id", 31002);
 
