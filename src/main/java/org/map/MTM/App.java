@@ -12,7 +12,7 @@ public class App {
     public static void main(String[] args) {
 
         Configuration cfg = new Configuration();
-        cfg.configure("hibernate3.cfg.xml");
+        cfg.configure("hibernate_mysql.cfg.xml");
         SessionFactory factory = cfg.buildSessionFactory();
         Session session = factory.openSession();
         Transaction tx = session.beginTransaction();
