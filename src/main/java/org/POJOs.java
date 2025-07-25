@@ -2,7 +2,7 @@
 // It contains only fields, constructor, setter and getter. It is used to map to a database table in
 // Object-Relational Mapping
 
-package np;
+package org;
 
 public class POJOs {
 
