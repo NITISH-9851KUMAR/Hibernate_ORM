@@ -7,7 +7,7 @@ import javax.persistence.Column;
 
 @Entity
 @Table(name = "person_emb")
-public class Person {
+public class PersonE {
 
     @Id
     private int emp_id;
@@ -20,10 +20,10 @@ public class Person {
 
     private Work work;
 
-    public Person() {
+    public PersonE() {
     }
 
-    public Person(int emp_id, String name, String home) {
+    public PersonE(int emp_id, String name, String home) {
         this.emp_id = emp_id;
         this.name = name;
         this.home = home;
