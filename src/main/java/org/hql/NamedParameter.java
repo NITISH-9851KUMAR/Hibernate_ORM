@@ -11,11 +11,11 @@ public class NamedParameter {
     public static void main(String[] args) {
 
         Configuration cfg = new Configuration();
-        cfg.configure("hibernate3.cfg.xml");
+        cfg.configure("hibernate_mysql.cfg.xml");
         SessionFactory factory = cfg.buildSessionFactory();
         Session session = factory.openSession();
 
-        String str = "from Student where name= :name";
+        String str = "FROM Student WHERE name= :name";
         Query query = session.createQuery(str);
         query.setParameter("name", "Nitish Kumar");
         // Set the value for name is know as Dynamic value
