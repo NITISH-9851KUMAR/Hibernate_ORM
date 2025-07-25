@@ -3,18 +3,17 @@ package org.hql;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-
-import javax.persistence.Query;
-
-import org.Student;
+import org.hibernate.query.*;
 
 import java.util.List;
+
+import org.Student;
 
 public class RetrieveData {
     public static void main(String[] args) {
 
         Configuration cfg = new Configuration();
-        cfg.configure("hibernate3.cfg.xml");
+        cfg.configure("hibernate_mysql.cfg.xml");
         SessionFactory factory = cfg.buildSessionFactory();
         Session session = factory.openSession();
 
@@ -28,21 +27,20 @@ public class RetrieveData {
         // This is part of HQL
         // Student is Class name not Table name
         // get Multiple value from the database
-        StringBuilder str= new StringBuilder("from Student");
-        Query query= session.createQuery(str.toString());
-        List<Student> st= query.getResultList();
-        for(Student student: st){
+        StringBuilder str = new StringBuilder("from Student");
+        Query query = session.createQuery(str.toString());
+        List<Student> st = query.getResultList();
+        for (Student student : st) {
             System.out.println(student);
         }
 
         // get single value
         str.setLength(0);
-        str.append("from Student WHERE id= 31004 and name= 'Nitish Kumar'");
+        str.append("from Student WHERE id= 31004 and name= 'Nitish Kumar' ");
 
-        query= session.createQuery(str.toString());
-        Student student= (Student)query.getSingleResult();
+        query = session.createQuery(str.toString());
+        Student student = (Student) query.getSingleResult();
         System.out.println(student);
-
 
         session.close();
         factory.close();
