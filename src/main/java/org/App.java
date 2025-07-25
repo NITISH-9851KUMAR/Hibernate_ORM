@@ -1,4 +1,4 @@
-package np;
+package org;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -12,7 +12,7 @@ import java.util.Date;
 public class App {
     public static void main(String[] args) throws IOException {
         Configuration cfg= new Configuration();
-        cfg.configure("hibernate3.cfg.xml");
+        cfg.configure("hibernate_mysql.cfg.xml");
         SessionFactory factory= cfg.buildSessionFactory();
         Session session= factory.openSession();
         Transaction tx= session.beginTransaction();
@@ -21,14 +21,18 @@ public class App {
 
         Annotation st= new Annotation(1, "Saharsa", true);
         st.setAddDate(new Date());
+
+        // Save Photo
         FileInputStream fis= new FileInputStream("D:\\Photo_All\\Screenshots\\Puzzle.jpg");
         byte[] img= new byte[fis.available()];
         fis.read(img);
         st.setImage(img);
         fis.close();
+
         session.save(st);
 
         session.close();
         factory.close();
+
     }
 }

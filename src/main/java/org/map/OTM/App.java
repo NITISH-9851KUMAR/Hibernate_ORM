@@ -1,4 +1,4 @@
-package np.map.OTM;
+package org.map.OTM;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

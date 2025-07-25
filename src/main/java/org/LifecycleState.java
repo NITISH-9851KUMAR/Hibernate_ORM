@@ -1,4 +1,4 @@
-package np;
+package org;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -13,15 +13,17 @@ public class LifecycleState {
         // Detached State
         // Removed State
         Configuration cfg = new Configuration();
-        cfg.configure("hibernate3.cfg.xml");
+        cfg.configure("hibernate_mysql.cfg.xml");
         SessionFactory factory = cfg.buildSessionFactory();
         Session session = factory.openSession();
         Transaction tx = session.beginTransaction();
 
         Student student = new Student();
-        student.setId(31004);
-        student.setName("Nitish");
-        student.setGrade('P');
+        student.setId(31009);
+        student.setName("Aditya");
+        student.setGrade('I');
+        student.setExamMarks(90.3);
+
         // When we set the property of student object
         // student -> Transient State
         // Associated with -> database: No , Session: No
@@ -30,8 +32,8 @@ public class LifecycleState {
         // student -> Persistent State
         // Associated With -> Database: Yes , Session: Yes
 
-        student.setName("Nitish Kumar");
-
+        student.setName("Aditya Raj");
+        // It will now work because object associated with Database and Session
         tx.commit();
 
         session.close();

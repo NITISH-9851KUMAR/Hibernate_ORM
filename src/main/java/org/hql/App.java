@@ -1,4 +1,4 @@
-package np.hql;
+package org.hql;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -6,7 +6,7 @@ import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.query.*;
 
-import org.hql.Student;
+//import org.hql.Student;
 
 import java.util.Arrays;
 import java.util.List;

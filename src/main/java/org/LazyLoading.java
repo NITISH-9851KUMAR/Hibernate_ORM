@@ -1,10 +1,10 @@
-package np;
+package org;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import np.map.OTM.Person;
+import org.map.OTM.Person;
 
 public class LazyLoading {
     public static void main(String[] args) {

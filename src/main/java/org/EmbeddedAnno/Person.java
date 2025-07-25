@@ -1,4 +1,4 @@
-package np.EmbeddedAnno;
+package org.EmbeddedAnno;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;

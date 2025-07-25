@@ -1,4 +1,4 @@
-package np.map.OTM;
+package org.map.OTM;
 
 import javax.persistence.*;
 import java.util.List;

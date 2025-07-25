@@ -1,4 +1,4 @@
-package np.hql;
+package org.hql;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

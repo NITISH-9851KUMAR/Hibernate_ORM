@@ -1,4 +1,4 @@
-package np.map.MTM;
+package org.map.MTM;
 
 import org.hibernate.cfg.Configuration;
 import org.hibernate.SessionFactory;

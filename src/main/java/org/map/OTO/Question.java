@@ -1,4 +1,4 @@
-package np.map.OTO;
+package org.map.OTO;
 
 import javax.persistence.*;
 

@@ -1,4 +1,4 @@
-package np.hql;
+package org.hql;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -6,7 +6,7 @@ import org.hibernate.cfg.Configuration;
 
 import javax.persistence.Query;
 
-import np.Student;
+import org.Student;
 
 import java.util.List;
 
