@@ -1,4 +1,4 @@
-package np;
+package org;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import javax.persistence.Column;
 
 @Entity
-@Table(name="Student2")
+@Table(name="Student")
 public class    Student {
 
     @Id
@@ -18,14 +18,17 @@ public class    Student {
     @Column(length= 1)
     private char grade;
 
-    public Student(){
+    @Column(name= "mark")
+    private double examMarks;
 
+    public Student(){
     }
 
-    public Student(int id, String name, char grade) {
+    public Student(int id, String name, char grade, double examMarks) {
         this.id = id;
         this.name = name;
         this.grade = grade;
+        this.examMarks= examMarks;
     }
 
     public int getId() {
@@ -52,8 +55,16 @@ public class    Student {
         this.grade = grade;
     }
 
-    public String toString(){
-        return this.id+" : "+this.name+" : "+this.grade;
+    public double getExamMarks() {
+        return examMarks;
     }
 
+    public void setExamMarks(double examMarks) {
+        this.examMarks = examMarks;
+    }
+
+    @Override
+    public String toString() {
+        return id+" "+name+" "+grade+" "+examMarks;
+    }
 }
