@@ -6,7 +6,6 @@ import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.query.*;
 
-//import org.hql.Student;
 
 import java.util.Arrays;
 import java.util.List;
