@@ -35,9 +35,7 @@ public class Person {
 
     @Override
     public String toString() {
-        return "personId= " + personId +
-                ", personName= '" + personName + '\'' +
-                '}';
+        return personId+" "+personName;
     }
 
 }
