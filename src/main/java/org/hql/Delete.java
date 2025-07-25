@@ -11,7 +11,7 @@ public class Delete {
     public static void main(String[] args) {
 
         Configuration cfg = new Configuration();
-        cfg.configure("hibernate3.cfg.xml");
+        cfg.configure("hibernate._mysql.cfg.xml");
         SessionFactory factory = cfg.buildSessionFactory();
         Session session = factory.openSession();
         Transaction tx= session.beginTransaction();
