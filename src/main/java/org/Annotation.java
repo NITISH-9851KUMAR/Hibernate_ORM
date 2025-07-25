@@ -1,4 +1,4 @@
-package np;
+package org;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
