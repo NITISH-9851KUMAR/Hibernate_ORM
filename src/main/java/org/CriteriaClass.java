@@ -18,8 +18,8 @@ public class CriteriaClass {
         Criteria criteria= session.createCriteria(Student.class);
 
         // Add the restrictions for filtering data using criteria class
-//        criteria.add(Restrictions.eq("id", 31005));
-//        criteria.add(Restrictions.gt("id", 31005));
+//        criteria.add(Restrictions.eq("id", 31005)); Filter value which is equal to 31004
+//        criteria.add(Restrictions.gt("id", 31005)); // Filter value which is greater then 31005
         criteria.add(Restrictions.like("name", "A%")); // Filter all name which starts with A
 
         List<Student> st= criteria.list();
