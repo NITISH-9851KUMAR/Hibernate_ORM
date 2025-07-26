@@ -3,6 +3,7 @@ package org;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.tool.schema.internal.exec.ScriptTargetOutputToFile;
 
 public class CachingSecond {
     public static void main(String[] args) {
@@ -11,18 +12,21 @@ public class CachingSecond {
         cfg.configure("hibernate_mysql.cfg.xml");
         SessionFactory factory= cfg.buildSessionFactory();
 
-        // First
+        // For Second level Caching first add dependency in pom.xml file
+        // Also add some property in hibernate.org.xml file
+        // Second Level Cache use on SessionFactory level
+
+        // First Session
         Session session1= factory.openSession();
-        Student student= session1.get(Student.class, 31009);
-        System.out.println(student);
+        Student s1= session1.get(Student.class, 31004);
+        System.out.println(s1);
         session1.close();
 
-        // Second
+        // Second Session
         Session session2= factory.openSession();
-        Student student2= session2.get(Student.class, 31009);
-        System.out.println(student2);
+        Student s2= session2.get(Student.class, 31004);
+        System.out.println(s2);
         session2.close();
-
 
         factory.close();
 
