@@ -21,19 +21,19 @@
         <property name="cache.region.factory_class">org.hibernate.cache.ehcache.internal.EhcacheRegionFactory</property>
 
         <!--         Mapping for Table Name      -->
-        <mapping class="org.Student" />
-        <mapping class="org.Annotation" />
+        <mapping class="org.Student"/>
+        <mapping class="org.Annotation"/>
         <mapping class="org.map.OTO.Question"/>
         <mapping class="org.map.OTO.Answer"/>
-        <mapping class="org.map.OTM.Person" />
-        <mapping class="org.map.OTM.Enemy" />
-        <mapping class="org.map.MTM.Project" />
-        <mapping class="org.map.MTM.Employee" />
+        <mapping class="org.map.OTM.Person"/>
+        <mapping class="org.map.OTM.Enemy"/>
+        <mapping class="org.map.MTM.Project"/>
+        <mapping class="org.map.MTM.Employee"/>
         <mapping class="org.EmbeddedAnno.PersonE"/>
         <mapping class="org.EmbeddedAnno.Work"/>
         <mapping class="org.cascading.QuestionC"/>
         <mapping class="org.cascading.AnswerC"/>
-<!--        <mapping resource="org/xmlMapping/Room.hbm.xml"/>-->
+        <!--        <mapping resource="org/xmlMapping/Room.hbm.xml"/>-->
 
 
     </session-factory>
