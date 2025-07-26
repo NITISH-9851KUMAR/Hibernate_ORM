@@ -19,14 +19,14 @@ public class LazyLoading {
 
         // It is by default Lazy Loading
         System.out.println(person);
-        // When we get the size of enemy then it executes enemy sql query
-        // Before it doesn't execute any sql query,  it is lazy loading
+//        // When we get the size of enemy then it executes enemy sql query
+//        // Before it doesn't execute any sql query,  it is lazy loading
         System.out.println(person.getEnemy().size());
 
 //        When we explicitly set the property Eager in mappedType Type then
-//        it automatically execute sql query for answer table when we only show the answer
+//        it automatically execute sql query for answer table when we only show the person
 //        System.out.println(person);
-//        System.out.println(p.getEnemy().size());
+//        System.out.println(person.getEnemy().size());
 
         session.close();
         factory.close();
