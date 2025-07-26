@@ -17,7 +17,7 @@ public class CachingFirst {
         System.out.println("Working Something.....");
 
         // Use First Level Caching because we fetch data for same object
-        // So hibernate first check if same object present in cache memory then they don't hit database again
+        // Hibernate first check if same object present in cache memory if yes then they don't hit database again
         // It is First level caching and valid till session.close(); method
         Student s1= session.get(Student.class, 31004);
         System.out.println(s1);
