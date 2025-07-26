@@ -33,6 +33,7 @@
         <mapping class="org.EmbeddedAnno.Work"/>
         <mapping class="org.cascading.QuestionC"/>
         <mapping class="org.cascading.AnswerC"/>
+        <mapping class="org.BatchProcessing"/>
         <!--        <mapping resource="org/xmlMapping/Room.hbm.xml"/>-->
 
 
